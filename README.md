@@ -1,4 +1,106 @@
-# Basic ADK Agent Example
+# NIW Petition Document Generator
+
+## Overview
+This project is a comprehensive toolset designed to assist in the preparation and generation of documents for U.S. National Interest Waiver (NIW) petitions under the EB-2 visa category. The system automates the creation of well-structured "Proposed Endeavor" documents, which are a critical component of NIW applications.
+
+## Key Features
+- **Automated Document Generation**: Creates professionally formatted PDF documents for NIW petitions
+- **Multi-Agent System**: Utilizes specialized AI agents for different stages of document preparation
+- **Web Research Integration**: Can gather and cite credible sources to support the petition
+- **PDF Creation**: Generates properly formatted PDFs with proper fonts and structure
+- **Web Content Capture**: Can capture and save web pages as PDFs for evidence collection
+
+## Project Structure
+```
+legal/
+├── Adeosun_Adewale_Victor/      # Example petition documents
+│   ├── exhibit1B/              # Exhibit folders containing source materials
+│   ├── exhibit1C/
+│   └── ...
+└── proposed_endeavour_agent/    # Main application code
+    ├── agent.py                # Core agent functionality
+    ├── generate_niw.py         # Main script for NIW document generation
+    ├── DejaVuSans.ttf          # Font file for PDF generation
+    ├── DejaVuSerif-Bold.ttf    # Bold font variant
+    ├── DejaVuSerif-Italic.ttf  # Italic font variant
+    └── test_output/            # Directory for generated documents
+```
+
+## Prerequisites
+- Python 3.9+
+- Google ADK (AI Development Kit)
+- Chrome or Chromium browser (for web capture functionality)
+- Required Python packages:
+  - fpdf
+  - requests
+  - selenium
+  - webdriver-manager
+  - google-adk
+
+## Installation
+1. Clone this repository:
+   ```bash
+   git clone <repository-url>
+   cd legal
+   ```
+
+2. Install the required Python packages:
+   ```bash
+   pip install fpdf requests selenium webdriver-manager
+   ```
+
+3. Install the Google ADK (follow the official installation instructions)
+
+## Usage
+1. Run the main script:
+   ```bash
+   python proposed_endeavour_agent/generate_niw.py
+   ```
+
+2. When prompted, paste your full CV text and press Enter twice.
+
+3. The system will analyze your CV and suggest 5 potential endeavor topics.
+
+4. Select your preferred topic, and the system will:
+   - Research credible sources
+   - Generate a comprehensive proposed endeavor document
+   - Save it as a PDF in the appropriate directory
+
+## Key Components
+
+### 1. CV Analysis Agent
+- Extracts the applicant's name from their CV
+- Brainstorms 5 suitable NIW endeavor topics
+- Identifies key qualifications and experiences
+
+### 2. Research Agent
+- Finds credible U.S. government and academic sources
+- Validates URLs and checks link status
+- Captures web pages as PDFs for evidence
+
+### 3. Document Writer Agent
+- Generates well-structured, persuasive content
+- Incorporates citations and references
+- Maintains consistent formatting and professional tone
+
+## Example Output
+Generated documents follow this structure:
+```
+Proposed Endeavor for [Applicant Name]
+
+Topic: [Selected Topic]
+
+[Comprehensive document content...]
+```
+
+## License
+This project is for educational and informational purposes only. Please consult with a qualified immigration attorney for legal advice regarding your specific situation.
+
+---
+
+## ADK Agent Documentation (Original)
+
+### What is an ADK Agent?
 
 ## What is an ADK Agent?
 
